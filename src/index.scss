@@ -1,0 +1,19 @@
+@import './assets/styles/fonts.scss';
+
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --gray-dark: #42567A;
+  --gray-dark-10: #42567a1a;
+  --gray-dark-20: #42567a33;
+  --gray-lite: #E5E5E5;
+  --fuchsia: #EF5DA8;
+  --iris: #5D5FEF;
+}
+
+body {
+  font-family: "PT Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

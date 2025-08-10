@@ -1,7 +1,13 @@
+import Circle from './components/Circle/Circle';
+
 import styles from './App.module.scss';
 
-function App() {
-  return <div className={styles.app}>Hello world!</div>;
-}
+const App = () => {
+  return (
+    <main className={styles.app}>
+      Hello world!
+    </main>
+  );
+};
 
 export default App;
