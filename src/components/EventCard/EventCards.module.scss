@@ -1,0 +1,27 @@
+.card {
+  min-height: 114px;
+}
+
+.year {
+  font-family: 'Bebas Neue', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--blue);
+  font-size: 25px;
+  margin-bottom: 15px;
+  line-height: 120%;
+}
+
+.description {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+@media (max-width: 768px) {
+  .year {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 145%;
+  }
+}
