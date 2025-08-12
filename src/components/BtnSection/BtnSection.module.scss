@@ -1,0 +1,34 @@
+.btnSection {
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid var(--gray-dark-40);
+  cursor: pointer;
+  transition: background 0.2s linear;
+}
+
+.btnSectionDisabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+
+  .btnSection {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (hover: hover) {
+  .btnSection:hover {
+    background: var(--white);
+  }
+
+  .btnSectionDisabled:hover {
+    background: unset;
+  }
+}

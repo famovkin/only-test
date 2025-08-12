@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import { FC } from 'react';
 
-import { ReactComponent as Arrow } from '../../assets/images/arrow-gray.svg';
 import useAppContext from '../../hooks/useAppContext';
+import BtnSection from '../BtnSection/BtnSection';
 
 import styles from './SectionNav.module.scss';
 
@@ -32,24 +32,16 @@ const SectionNav: FC<ISectionNav> = ({
         0{section + 1}/0{config.length}
       </p>
       <div>
-        <button
-          className={classNames(styles.prevBtn, {
-            [styles.btnDisabled]: isPrevBtnDisabled,
-          })}
+        <BtnSection
           onClick={prevHandler}
           disabled={isPrevBtnDisabled}
-        >
-          <Arrow width={7} height={13} />
-        </button>
-        <button
-          className={classNames(styles.nextBtn, {
-            [styles.btnDisabled]: isNextBtnDisabled,
-          })}
+          modificator={styles.prevBtn}
+        />
+        <BtnSection
           onClick={nextHandler}
           disabled={isNextBtnDisabled}
-        >
-          <Arrow width={7} height={13} />
-        </button>
+          modificator={styles.nextBtn}
+        />
       </div>
     </div>
   );

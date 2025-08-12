@@ -3,19 +3,6 @@
   font-size: 14px;
 }
 
-.nextBtn,
-.prevBtn {
-  width: 50px;
-  height: 50px;
-  border: none;
-  outline: none;
-  border-radius: 50%;
-  background: transparent;
-  border: 1px solid var(--gray-dark-40);
-  cursor: pointer;
-  transition: background 0.2s linear;
-}
-
 .prevBtn {
   margin-right: 20px;
 }
@@ -28,35 +15,12 @@
   }
 }
 
-.btnDisabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
 @media (max-width: 768px) {
   .sectionNumber {
     margin-bottom: 10px;
   }
 
-  .nextBtn,
-  .prevBtn {
-    width: 25px;
-    height: 25px;
-  }
-
   .prevBtn {
     margin-right: 8px;
-  }
-}
-
-@media (hover: hover) {
-
-  .nextBtn:hover,
-  .prevBtn:hover {
-    background: var(--white);
-  }
-
-  .btnDisabled:hover {
-    background: unset;
   }
 }
