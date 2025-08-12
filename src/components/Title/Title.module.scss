@@ -1,0 +1,42 @@
+.title {
+  font-size: 56px;
+  line-height: 120%;
+  font-weight: 700;
+  color: var(--gray-dark);
+  padding: 0 78px;
+}
+
+.title:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 100%;
+  background: var(--blue);
+  background: linear-gradient(180deg, var(--blue) 0%, var(--fuchsia) 100%);
+}
+
+@media (max-width: 1440px) {
+  .title {
+    padding: 0;
+  }
+
+  .title:before {
+    display: none;
+  }
+}
+
+@media (max-width: 1280px) {
+  .title {
+    font-size: 37px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 20px;
+    ;
+  }
+}
