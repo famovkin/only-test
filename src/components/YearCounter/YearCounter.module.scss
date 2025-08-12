@@ -1,0 +1,19 @@
+.year {
+  font-size: 200px;
+  font-weight: 700;
+  letter-spacing: -2%;
+  line-height: 160px;
+}
+
+@media (max-width: 1280px) {
+  .year {
+    font-size: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .year {
+    font-size: 56px;
+    line-height: normal;
+  }
+}
