@@ -1,0 +1,76 @@
+.point {
+  position: absolute;
+  display: flex;
+  width: 8px;
+  height: 8px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gray-lite);
+  border-radius: 50%;
+  background: var(--gray-dark);
+  color: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 30px;
+  transform: translate(-5px, -5px);
+  transition-duration: var(--animation-duration-300);
+  transition-property: background, width, height, transform;
+  transition-timing-function: ease
+}
+
+.pointNumber {
+  display: none;
+  font-family: 'PT Sans', 'Helvetica Neue', Arial, sans-serif;
+  transform-origin: center;
+  transition: transform var(--animation-duration-600) linear;
+  will-change: transform;
+}
+
+.pointActive {
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--gray-middle);
+  background: transparent;
+  background: var(--gray-lite);
+  color: var(--gray-dark);
+  transform: translate(-28px, -28px);
+
+  .pointNumber {
+    display: block;
+  }
+}
+
+.pointTitle {
+  position: absolute;
+  min-width: 100px;
+  color: var(--gray-dark);
+  font-family: 'PT Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  opacity: 0;
+  pointer-events: none;
+  text-align: left;
+  transition: all var(--animation-duration-600) linear;
+}
+
+.pointTitleActive {
+  opacity: 1;
+}
+
+@media (hover: hover) {
+  .point:hover {
+    width: 56px;
+    height: 56px;
+    border: 1px solid var(--gray-middle);
+    background: transparent;
+    background: var(--gray-lite);
+    color: var(--gray-dark);
+    transform: translate(-28px, -28px);
+
+    .pointNumber {
+      display: block;
+    }
+  }
+}
