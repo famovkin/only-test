@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useRef, useState, memo } from 'react';
 
 import styles from './YearCounter.module.scss';
 
@@ -49,4 +49,4 @@ const YearCounter: FC<ICounter> = ({ year }) => {
   );
 };
 
-export default YearCounter;
+export default memo(YearCounter);

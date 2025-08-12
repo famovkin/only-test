@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { FC } from 'react';
+import { FC, memo } from 'react';
 
 import styles from './Title.module.scss';
 
@@ -21,4 +21,4 @@ const Title: FC<ITitle> = ({ modificator }) => {
   );
 };
 
-export default Title;
+export default memo(Title);
