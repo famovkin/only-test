@@ -7,38 +7,46 @@ interface ICounter {
 }
 
 const INTERVAL_ANIMATION_MS = 100;
+const YEAR_STEP = 1;
 
 const YearCounter: FC<ICounter> = ({ year }) => {
   const [yearValue, setYearValue] = useState(year);
-  const timeoutRef = useRef<number | null>(null);
+  const currentRef = useRef(year);
+  const intervalRef = useRef<number | null>(null);
 
   const cleanUp = () => {
-    if (timeoutRef.current !== null) {
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
+    if (intervalRef.current !== null) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
     }
   };
 
   useEffect(() => {
-    cleanUp();
+    currentRef.current = yearValue;
+  }, [yearValue]);
 
-    const tick = () => {
+  useEffect(() => {
+    if (currentRef.current === year) return;
+
+    intervalRef.current = window.setInterval(() => {
       setYearValue((prev) => {
-        if (prev === year) return prev;
-        const next = prev < year ? prev + 1 : prev - 1;
-        timeoutRef.current = window.setTimeout(tick, INTERVAL_ANIMATION_MS);
-        return next;
-      });
-    };
+        if (prev === year) {
+          cleanUp();
+          return prev;
+        }
 
-    if (yearValue !== year) {
-      timeoutRef.current = window.setTimeout(tick, INTERVAL_ANIMATION_MS);
-    }
+        return prev < year ? prev + YEAR_STEP : prev - YEAR_STEP;
+      });
+    }, INTERVAL_ANIMATION_MS);
 
     return cleanUp;
   }, [year]);
 
-  return <p className={styles.year}>{yearValue}</p>;
+  return (
+    <p className={styles.year} aria-live="polite">
+      {yearValue}
+    </p>
+  );
 };
 
 export default YearCounter;
