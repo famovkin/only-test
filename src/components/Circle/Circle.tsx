@@ -8,7 +8,7 @@ import { PointСoordinate, sectionsCount } from '../../types';
 
 import styles from './Circle.module.scss';
 
-const ANGLE_OFFSET = 50;
+const ANGLE_OFFSET = 60;
 // Оффсет угла для того, чтобы текущая точка
 // была в правом верхнем углу
 
