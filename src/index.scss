@@ -31,3 +31,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+button:focus-visible:not([disabled]) {
+  outline: 1px solid var(--gray-dark);
+  outline-offset: 1px;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
