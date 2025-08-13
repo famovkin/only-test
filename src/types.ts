@@ -3,6 +3,7 @@ type sectionsCount = 2 | 3 | 4 | 5 | 6;
 type PointСoordinate = {
   x: number;
   y: number;
+  angle: number;
 };
 
 type EventItem = { year: number; description: string };
