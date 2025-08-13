@@ -1,0 +1,137 @@
+.animationWrapper {
+  position: relative;
+  opacity: 1;
+}
+
+.swiper {
+  max-width: calc(100% - var(--desk-offset) * 2);
+  cursor: grab;
+}
+
+.sectionTitle {
+  display: none;
+}
+
+.customPaginationBullet {
+  width: 6px;
+  height: 6px;
+  background: var(--gray-dark-40);
+  opacity: 1;
+}
+
+.customPaginationBulletActive {
+  background: var(--gray-dark);
+}
+
+.swiperButtonPrev.swiperButtonPrev {
+  left: 20px;
+  transform: rotate(180deg) translateY(50%);
+}
+
+.swiperButtonNext {
+  right: 20px;
+}
+
+.navDisabled.navDisabled {
+  display: none;
+}
+
+.fadeOut {
+  animation: fade-out 0.3s ease-out forwards;
+}
+
+.fadeIn {
+  animation: fade-in-up 0.3s ease-out forwards;
+}
+
+.sectionNavMod {
+  display: none;
+}
+
+.pagination {
+  display: flex;
+  max-width: fit-content;
+  padding: 10px;
+  gap: 10px;
+}
+
+.bullet {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--gray-dark-40);
+}
+
+.bulletActive {
+  width: 6px;
+  height: 6px;
+  background-color: var(--gray-dark);
+}
+
+.navigation {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .swiper.swiper {
+    max-width: fit-content;
+    padding: 0 var(--mob-offset);
+    margin-bottom: 103px;
+  }
+
+  .sectionTitle {
+    display: block;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #C7CDD9;
+    margin: 0 var(--mob-offset) 20px;
+    color: var(--gray-dark);
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .swiperButtonPrev,
+  .swiperButtonNext {
+    display: none;
+  }
+
+  .navigation {
+    position: relative;
+    bottom: -13px;
+    display: flex;
+    width: 100%;
+    min-height: 55px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 26px;
+  }
+
+  .sectionNavMod {
+    position: absolute;
+    top: -50%;
+    left: var(--mob-offset);
+    display: block;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
