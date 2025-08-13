@@ -14,3 +14,5 @@
 ### `npm run build`
 
 Собирает проект в деплоя в папке `build`.
+
+Приложение задеплоено по [ссылке](https://famovkin.github.io/only-test/)
