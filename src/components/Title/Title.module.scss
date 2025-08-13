@@ -1,21 +1,21 @@
 .title {
-  font-size: 56px;
-  line-height: 120%;
-  font-weight: 700;
-  color: var(--gray-dark);
   padding: 0 78px;
+  color: var(--gray-dark);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 120%;
 }
 
-.title:before {
-  content: "";
+.title::before {
   position: absolute;
-  left: 0;
   top: 50%;
-  transform: translateY(-50%);
+  left: 0;
   width: 5px;
   height: 100%;
   background: var(--blue);
   background: linear-gradient(180deg, var(--blue) 0%, var(--fuchsia) 100%);
+  content: "";
+  transform: translateY(-50%);
 }
 
 @media (max-width: 1440px) {
@@ -23,7 +23,7 @@
     padding: 0;
   }
 
-  .title:before {
+  .title::before {
     display: none;
   }
 }

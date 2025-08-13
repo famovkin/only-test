@@ -2,11 +2,11 @@
   width: 50px;
   height: 50px;
   border: none;
-  outline: none;
+  border: 1px solid var(--gray-dark-40);
   border-radius: 50%;
   background: transparent;
-  border: 1px solid var(--gray-dark-40);
   cursor: pointer;
+  outline: none;
   transition: background 0.2s linear;
 }
 
@@ -16,7 +16,6 @@
 }
 
 @media (max-width: 768px) {
-
   .btnSection {
     width: 25px;
     height: 25px;

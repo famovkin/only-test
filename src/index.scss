@@ -1,8 +1,8 @@
-@import './assets/styles/fonts.scss';
+@import './assets/styles/fonts';
 
 :root {
-  --black: #000000;
-  --white: #FFFFFF;
+  --black: #000;
+  --white: #FFF;
   --gray-dark: #42567A;
   --gray-dark-10: #42567a1a;
   --gray-dark-20: #42567a33;
@@ -12,22 +12,22 @@
   --fuchsia: #EF5DA8;
   --iris: #5D5FEF;
   --blue: #3877EE;
-  --blue-10: rgba(56, 119, 238, 0.1);
+  --blue-10: rgb(56 119 238 / 10%);
   --mob-offset: 20px;
   --desk-offset: 78px;
   --animation-duration-300: 0.3s;
-  --animation-duration-500: 0.5s;
+  --animation-duration-600: 0.5s;
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  font-family: "PT Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   margin: 0;
+  font-family: "PT Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

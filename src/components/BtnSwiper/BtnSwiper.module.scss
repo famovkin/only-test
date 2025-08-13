@@ -1,24 +1,23 @@
 .btnSwiper {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background: var(--white);
-  border: none;
-  outline: none;
   width: 40px;
   height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: none;
   border-radius: 50%;
-  -webkit-box-shadow: 0px 0px 10px 1px var(--blue-10);
-  -moz-box-shadow: 0px 0px 10px 1px var(--blue-10);
-  box-shadow: 0px 0px 10px 1px var(--blue-10);
+  background: var(--white);
+  box-shadow: 0 0 10px 1px var(--blue-10);
+  box-shadow: 0 0 10px 1px var(--blue-10);
+  box-shadow: 0 0 10px 1px var(--blue-10);
+  cursor: pointer;
+  outline: none;
+  transform: translateY(-50%);
 }
 
 @media (max-width: 768px) {
-
   .btnSwiper {
     display: none;
   }
