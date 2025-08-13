@@ -5,6 +5,10 @@ const calcMinStep = (
   sectionCount: sectionsCount,
   nextSection: number
 ): number => {
+  console.log('currentSection', currentSection)
+  console.log('sectionCount', sectionCount)
+  console.log('nextSection', nextSection)
+
   const currentPoint =
     (((currentSection || 0) % sectionCount) + sectionCount) % sectionCount;
   const nextPoint =
