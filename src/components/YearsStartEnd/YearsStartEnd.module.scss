@@ -1,0 +1,26 @@
+.yearsWrapper {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: auto;
+  gap: 50px;
+  transform: translateY(-50%);
+}
+
+.yearsWrapper>p:first-child {
+  color: var(--iris);
+}
+
+.yearsWrapper>p:last-child {
+  color: var(--fuchsia);
+}
+
+@media (max-width: 768px) {
+  .yearsWrapper {
+    position: static;
+    max-width: calc(100% - var(--mob-offset) * 2);
+    transform: unset;
+  }
+}
