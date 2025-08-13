@@ -2,7 +2,7 @@
   "name": "only-test",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://famovkin.github.io/only-test/",
   "dependencies": {
     "@types/node": "^16.18.126",
     "@types/react": "^19.1.9",
@@ -18,7 +18,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "stylelint:fix": "stylelint \"src/**/*.{css,scss}\" --fix"
+    "stylelint:fix": "stylelint \"src/**/*.{css,scss}\" --fix",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "stylelint": "^16.23.1",
     "stylelint-config-idiomatic-order": "^10.0.0",
     "stylelint-config-standard-scss": "^15.0.1"
